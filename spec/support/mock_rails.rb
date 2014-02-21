@@ -4,6 +4,10 @@ require 'action_pack'
 require 'action_view'
 require 'action_controller'
 require 'action_dispatch'
+require 'active_model'
+require 'active_support/core_ext'
+
+
 
 # Thanks to Justin French for formtastic spec
 module FoundationRailsSpecHelper
