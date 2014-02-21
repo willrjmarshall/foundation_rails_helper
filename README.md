@@ -6,7 +6,7 @@ Gem for Rails 3 applications that use the excellent Zurb Foundation framework.
 * [Zurb Foundation Rails](https://github.com/zurb/foundation-rails)
 
 ### Customizations
-* Instead of overriding form_for and fields_for, we now have f_form_for and f_fields_for
+Instead of overriding `form_for` and `fields_for`, we now have `f_form_for` and `f_fields_for`
 
 So far it includes:
 
