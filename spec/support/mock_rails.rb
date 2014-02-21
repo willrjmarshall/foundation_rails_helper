@@ -27,6 +27,7 @@ module FoundationRailsSpecHelper
   include ActionView::Helpers::AssetTagHelper
   include ActiveSupport
   include ActionController::PolymorphicRoutes if defined?(ActionController::PolymorphicRoutes)
+  include ActionDispatch::Routing::UrlFor
 
   def active_model_validator(kind, attributes, options = {})
     validator = mock("ActiveModel::Validations::#{kind.to_s.titlecase}Validator", :attributes => attributes, :options => options)
