@@ -1,22 +1,19 @@
 module ActionView
   module Helpers
     module FormHelper
-      def form_for_with_foundation(record, options = {}, &block)
+      def f_form_for(record, options = {}, &block)
         options[:builder] ||= FoundationRailsHelper::FormBuilder
         options[:html] ||= {}
         options[:html][:class] ||= 'nice'
-        form_for_without_foundation(record, options, &block) 
+        form_for(record, options, &block) 
       end
       
-      def fields_for_with_foundation(record_name, record_object = nil, options = {}, &block)
+      def f_fields_for(record_name, record_object = nil, options = {}, &block)
         options[:builder] ||= FoundationRailsHelper::FormBuilder
         options[:html] ||= {}
         options[:html][:class] ||= 'nice'
-        fields_for_without_foundation(record_name, record_object, options, &block)
+        fields_for(record_name, record_object, options, &block)
       end
-      
-      alias_method_chain :form_for, :foundation
-      alias_method_chain :fields_for, :foundation
     end
   end
 end
