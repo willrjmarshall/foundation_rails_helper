@@ -24,8 +24,9 @@ module FoundationRailsHelper
     def radio_button(attribute, tag_value, options = {})
       options[:for] ||= "#{@object_name}_#{attribute}_#{tag_value}"
       c = super(attribute, tag_value, options)
-      l = label(attribute, options.delete(:text), options)
-      l.gsub(/(for=\"\w*\"\>)/, "\\1#{c} ").html_safe
+      text = options.delete(:text)
+      l = label(attribute, text, options)
+      l.gsub(/(\>#{text})/, "\\1#{c} ").html_safe
     end
 
     def password_field(attribute, options = {})
