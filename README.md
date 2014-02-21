@@ -5,6 +5,9 @@ Gem for Rails 3 applications that use the excellent Zurb Foundation framework.
 * [Zurb Foundation](https://github.com/zurb/foundation)
 * [Zurb Foundation Rails](https://github.com/zurb/foundation-rails)
 
+### Customizations
+* Instead of overriding form_for and fields_for, we now have f_form_for and f_fields_for
+
 So far it includes:
 
 * A custom FormBuilder that generates a form using the Foundation framework. It replaces the current `form_for` so you don't have to change your Rails code. Error messages are properly displayed.
